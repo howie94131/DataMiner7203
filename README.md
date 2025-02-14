@@ -43,14 +43,14 @@ Required Packages:
 
 Install the required packages by running the following line in terminal:
 
-	pip install numpy pandas scikit-learn joblib
+`pip install numpy pandas scikit-learn joblib`
 
 
 ## 3. Reproduction Instructions
 
 To execute the entire workflow, run main.py from your file path in terminal:
 
-	Run: python main.py
+`python main.py`
 
 To reproduce the results steps by steps, follow these steps:
 
@@ -58,7 +58,7 @@ To reproduce the results steps by steps, follow these steps:
 Ensure DM_project_24.csv and test_data.csv are placed in the raw directory, names unchanged.
 The preprocessing script will load, impute, detect outliers, and normalise the data. 
 
-	Run: python preprocessing.py raw/DM_project_24.csv
+`python preprocessing.py raw/rawData.csv`
 
 The preprocessed data will be saved to processed/data.csv.
 
@@ -66,14 +66,15 @@ The preprocessed data will be saved to processed/data.csv.
 
 Run the training script to train classifiers, perform cross-validation, and save the best model.
 
-	Run: python training.py
+`python training.py`
 
 The best model will be saved to model/best_model.joblib.
 
 - Prediction of the Model:
+
 Use the application script to make predictions on the test data and save the results:
 
-	Run: python prediction.py
+`python prediction.py`
 
 Predictions will be output to result/s4795041.csv, formatted as specified in the specsheet.
 
