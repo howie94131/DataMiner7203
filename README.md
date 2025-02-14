@@ -11,19 +11,23 @@ outliers were removed to prevent skewing of trained model.
 
 ### Classification Model and Hyperparameters:
 
-- K-Nearest Neighbors (K-NN):
+**K-Nearest Neighbors (K-NN)**:
 Hyperparameters: Best k value and distance metric were selected via grid search (5-fold CV), exploring k 
 values from 3 to 15 and metrics: Euclidean and Manhattan.
-- Naive Bayes:
+
+**Naive Bayes**:
 Model: Gaussian Naive Bayes, chosen for handling continuous numerical features.
 Class priors were adjusted to account for class imbalance.
-- Decision Tree:
+
+**Decision Tree**:
 Hyperparameters: max_depth, min_samples_split, and splitting criterion (Gini index, entropy).
 Optimal values selected via grid search (5-fold CV).
-- Random Forest:
+
+**Random Forest**:
 Hyperparameters: n_estimators, max_depth, and max_features.
 Best configuration determined via grid search (5-fold CV).
-- Ensemble Model:
+
+**Ensemble Model**:
 Method: Voting Classifier with hard voting, combining K-NN, Naive Bayes, Decision Tree, and Random Forest.
 Final predictions were based on majority voting, and this model was selected as the final classifier for deployment.
 
@@ -54,7 +58,7 @@ To execute the entire workflow, run main.py from your file path in terminal:
 
 To reproduce the results steps by steps, follow these steps:
 
-- Data Preparation:
+### Data Preparation:
 Ensure DM_project_24.csv and test_data.csv are placed in the raw directory, names unchanged.
 The preprocessing script will load, impute, detect outliers, and normalise the data. 
 
@@ -62,7 +66,7 @@ The preprocessing script will load, impute, detect outliers, and normalise the d
 
 The preprocessed data will be saved to processed/data.csv.
 
-- Training Models:
+### Training Models:
 
 Run the training script to train classifiers, perform cross-validation, and save the best model.
 
@@ -70,13 +74,13 @@ Run the training script to train classifiers, perform cross-validation, and save
 
 The best model will be saved to model/best_model.joblib.
 
-- Prediction of the Model:
+### Prediction of the Model:
 
 Use the application script to make predictions on the test data and save the results:
 
 `python prediction.py`
 
-Predictions will be output to result/s4795041.csv, formatted as specified in the specsheet.
+Predictions will be output to result/output.csv, formatted as specified in the specsheet.
 
 ## 4. Additional Justifications
 **F1-Score Selection**: F1-score was chosen over accuracy to address potential class imbalance, providing a balanced 
