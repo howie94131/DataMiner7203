@@ -1,5 +1,5 @@
-README
-1. Final Choices
+# DataMiner
+## 1. Final Choices
 
 Pre-processing Methods:
 
@@ -42,7 +42,7 @@ Final predictions were based on majority voting, and this model was selected as 
 The final decision selected K-NN as the best-performing model that is saved for usage for result prediction.
 
 
-2. Environment Description
+## 2. Environment Description
 
 - Operating System: Windows 10
 - Programming Language: Python 3.10
@@ -59,7 +59,7 @@ Install the required packages by running the following line in terminal:
 	pip install numpy pandas scikit-learn joblib
 
 
-3. Reproduction Instructions
+## 3. Reproduction Instructions
 
 To execute the entire workflow, run main.py from your file path in terminal:
 
@@ -90,7 +90,7 @@ Use the application script to make predictions on the test data and save the res
 
 Predictions will be output to result/s4795041.csv, formatted as specified in the specsheet.
 
-4. Additional Justifications
+## 4. Additional Justifications
 - F1-Score Selection: F1-score was chosen over accuracy to address potential class imbalance, providing a balanced 
 evaluation of model precision and recall.
 - Cross-Validation: CV was used in hyperparameter tuning and final evaluation to reduce overfitting risk, ensuring 
