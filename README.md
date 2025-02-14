@@ -89,8 +89,6 @@ evaluation of model precision and recall.
 **Cross-Validation**: CV was used in hyperparameter tuning and final evaluation to reduce overfitting risk, ensuring 
 that models generalise well to unseen data.
 
-**Model Choices**: The project uses 5-fold CV to compare the performance of each selected classifier method using
-
-**F1 score**. The CV result have K-NN being the best performing model with a F1 score of 0.845. K-NN is thus chosen
+**Model Choices**: The project uses 5-fold CV to compare the performance of each selected classifier method using F1 score. The CV result have K-NN being the best performing model with a F1 score of 0.845. K-NN is thus chosen
 to be the classifier to execute the prediction on test_data.csv. Other model such as random forest and ensemble method
 also demonstrate a strong performance with a f1 score > 0.8, but K-NN is chosen due to its performance and efficiency.
